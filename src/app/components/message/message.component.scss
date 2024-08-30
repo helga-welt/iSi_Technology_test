@@ -1,0 +1,25 @@
+@use "../../../theme/variables" as v;
+
+.message-block {
+  position: fixed;
+  top: 40px;
+  min-width: 280px;
+  width: auto;
+  font-family: v.$helveticaRegular;
+  font-size: 13px;
+  color: v.$white;
+  border-radius: 6px;
+  padding: 20px 26px;
+
+  &.error {
+    left: 46px;
+    background-color: v.$error;
+    box-shadow: 0 10px 15px v.$errorShadow;
+  }
+
+  &.success {
+    right: 46px;
+    background-color: v.$success;
+    box-shadow: 0 10px 15px v.$successShadow;
+  }
+}

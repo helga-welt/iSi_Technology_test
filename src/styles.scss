@@ -1,1 +1,125 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./theme/variables" as v;
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+  height: 100dvh;
+  background-color: v.$backgroundBody;
+  padding: 120px 46px;
+  position: relative;
+}
+
+*::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: v.$backgroundHoverTableTd;
+}
+
+*::-webkit-scrollbar
+{
+  width: 8px;
+  background-color: v.$white;
+}
+
+*::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: v.$backgroundBlocks;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+
+  .mat-mdc-form-field-infix {
+    background-color: v.$white;
+  }
+
+  .mdc-text-field {
+    padding: 0;
+  }
+
+  mat-label {
+    font-family: v.$helveticaRegular;
+    font-size: 13px;
+    color: v.$text;
+  }
+
+  .mat-mdc-form-field-required-marker {
+    display: none;
+  }
+
+  .mat-mdc-form-field-input-control.mat-mdc-form-field-input-control,
+  .mat-mdc-select {
+    background-color: v.$backgroundInputs;
+    border: 1px solid  v.$backgroundInputs;
+    padding: 10px 16px;
+    font-family: v.$helveticaLight;
+    font-size: 13px;
+    color: v.$text !important;
+    line-height: 13px;
+    border-radius: 6px;
+  }
+
+  .mat-mdc-form-field-input-control.mat-mdc-form-field-input-control[name='email'] {
+    background: url("assets/icons/email.png") v.$backgroundInputs no-repeat 10px center;
+    padding: 10px 16px 10px 40px;
+  }
+
+  .mat-mdc-select {
+    background: url("assets/icons/arrow.png") v.$backgroundInputs no-repeat 98% center;
+  }
+
+  .mdc-text-field--filled.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-text-field__input {
+    caret-color: v.$error;
+    border: 1px solid  v.$error;
+  }
+
+  .mdc-line-ripple {
+    display: none;
+  }
+
+  .mat-mdc-form-field-infix {
+    padding-bottom: 0;
+    padding-top: 23px;
+    min-height: 0;
+  }
+
+  .mat-mdc-form-field-hint-wrapper, .mat-mdc-form-field-error-wrapper {
+    padding: 0;
+  }
+
+  .mat-mdc-form-field-error {
+    font-family: v.$helveticaRegular;
+    font-size: 13px;
+    color: v.$error;
+  }
+
+  .mat-mdc-select-arrow-wrapper {
+    display: none;
+  }
+}
+
+.mat-mdc-option .mdc-list-item__primary-text {
+  font-family: v.$helveticaRegular !important;
+  font-size: 13px !important;
+  color: v.$text;
+}
+
+.not-found-page {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: v.$helveticaBold;
+  color: v.$text;
+  text-align: center;
+
+  h1 {
+    font-size: 150px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+}

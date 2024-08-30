@@ -1,0 +1,48 @@
+@use "../../../../../theme/variables" as v;
+@use "../../../../../theme/mixins" as m;
+
+.form-block {
+  @include m.wrap-block;
+
+  padding: 31px 26px;
+
+  .form-block_header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2 {
+      font-family: v.$helveticaBold;
+      font-size: 16px;
+      color: v.$text;
+      margin: 0;
+    }
+
+    img.form-block_close {
+      cursor: pointer;
+    }
+  }
+
+  .form-block_content {
+    margin-top: 20px;
+  }
+
+  .form-block_buttons {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &.form-block_create {
+      justify-content: center;
+    }
+
+    .form-block_save {
+      @include m.blue-button;
+    }
+
+    .form-block_delete {
+      @include m.red-button;
+    }
+  }
+}

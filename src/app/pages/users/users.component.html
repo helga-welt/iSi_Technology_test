@@ -1,0 +1,38 @@
+@if (!message.hidden) {
+    <app-message [type]="message.type" [message]="message.message"></app-message>
+}
+
+<section class="users-block">
+    <div class="container-fluid p-0">
+        <div class="row p-0">
+            <div class="col-8 p-0">
+                <div class="users-block_buttons">
+                    <button class="users-block_button" (click)="openCreateMode()">Create user</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <section class="users-block_table">
+                    <app-users-table
+                            [users]="users()"
+                            (selectUser)="selectUser($event)"
+                            [selectedUserId]="user()?.id"
+                    ></app-users-table>
+                </section>
+            </div>
+            <div class="col-4 p-0">
+                @if (mode !== 1) {
+                    <section class="users-block_form">
+                        <app-edit-form [mode]="mode"
+                                       [userId]="user()?.id"
+                                       (closeForm)="closeForm()"
+                                       (saveData)="saveUser($event)"
+                                       (deleteUser)="deleteUser()"
+                        ></app-edit-form>
+                    </section>
+                }
+            </div>
+        </div>
+    </div>
+</section>

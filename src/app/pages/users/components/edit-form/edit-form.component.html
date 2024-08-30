@@ -1,0 +1,69 @@
+<div class="form-block">
+    <div class="form-block_header">
+        @if (user()) {
+            <h2>{{user()?.firstName}} {{user()?.lastName}}</h2>
+        } @else {
+            <h2>Create new user</h2>
+        }
+
+        <img src="assets/icons/close.png" alt="Close" class="form-block_close" (click)="closeForm.emit(true)">
+    </div>
+
+    <div class="form-block_content">
+        <form [formGroup]="userForm" class="form-block_form">
+            <mat-form-field floatLabel="always">
+                <mat-label>Username*</mat-label>
+                <input matInput type="text" id="username" name="username" formControlName="username" autocomplete="off webauthn" />
+                <mat-error [appValidationError]="userForm.get('username')?.errors"></mat-error>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always">
+                <mat-label>First name*</mat-label>
+                <input matInput type="text" id="firstName" name="firstName" formControlName="firstName" autocomplete="off webauthn" />
+                <mat-error [appValidationError]="userForm.get('firstName')?.errors"></mat-error>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always">
+                <mat-label>Last name*</mat-label>
+                <input matInput type="text" id="lastName" name="lastName" formControlName="lastName" autocomplete="off webauthn" />
+                <mat-error [appValidationError]="userForm.get('lastName')?.errors"></mat-error>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always">
+                <mat-label>Email*</mat-label>
+                <input matInput type="email" id="email" name="email" formControlName="email" />
+                <mat-error [appValidationError]="userForm.get('email')?.errors"></mat-error>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always">
+                <mat-label>Type*</mat-label>
+                <mat-select id="type" formControlName="type">
+                    <mat-option value="Admin">Admin</mat-option>
+                    <mat-option value="Driver">Driver</mat-option>
+                </mat-select>
+                <mat-error [appValidationError]="userForm.get('type')?.errors"></mat-error>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always">
+                <mat-label>Password*</mat-label>
+                <input matInput type="password" id="password" name="password" formControlName="password" autocomplete="off webauthn" />
+                <mat-error [appValidationError]="userForm.get('password')?.errors"></mat-error>
+            </mat-form-field>
+
+            <mat-form-field floatLabel="always">
+                <mat-label>Repeat Password*</mat-label>
+                <input matInput type="password" id="confirmPassword" name="confirmPassword" formControlName="confirmPassword" autocomplete="off webauthn" />
+                <mat-error [appValidationError]="userForm.get('confirmPassword')?.errors"></mat-error>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <div class="form-block_buttons" [ngClass]="{'form-block_create': mode() === 2}">
+        @if (mode() === 2) {
+            <button class="form-block_save" (click)="onSubmit()" [disabled]="userForm.invalid">Create</button>
+        } @else {
+            <button class="form-block_delete" (click)="onDelete()">Delete</button>
+            <button class="form-block_save" (click)="onSubmit()" [disabled]="userForm.invalid || !userForm.dirty ">Save</button>
+        }
+    </div>
+</div>

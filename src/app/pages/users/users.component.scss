@@ -1,0 +1,11 @@
+@use "../../../theme/variables" as v;
+@use "../../../theme/mixins" as m;
+
+.users-block_buttons {
+  text-align: right;
+  margin-bottom: 16px;
+
+  button {
+    @include m.blue-button;
+  }
+}

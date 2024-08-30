@@ -1,0 +1,38 @@
+@use "./variables" as v;
+
+@mixin wrap-block {
+  height: 70dvh;
+  overflow: hidden;
+  overflow-y: auto;
+  background-color: white;
+  box-shadow: 0 0 30px v.$backgroundBlocks;
+  border-radius: 6px;
+}
+
+@mixin button {
+  font-family: v.$helveticaRegular;
+  font-size: 14px;
+  color: v.$white;width: 120px;
+  padding: 10px 0;
+  text-align: center;
+  border-radius: 6px;
+  border: none;
+
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+@mixin blue-button {
+  @include button;
+
+  background-color: v.$blueButton;
+  box-shadow: 0 5px 8px v.$blueShadowButton;
+}
+
+@mixin red-button {
+  @include button;
+
+  background-color: v.$deleteButton;
+  box-shadow: 0 5px 8px v.$deleteButtonShadow;
+}

@@ -1,0 +1,41 @@
+@use "../../../../../theme/variables" as v;
+@use "../../../../../theme/mixins" as m;
+
+.users-table {
+  @include m.wrap-block;
+
+  table {
+    box-shadow: none;
+
+    .mat-mdc-header-cell {
+      font-family: v.$helveticaBold;
+      font-size: 13px;
+      color: v.$textLabels;
+      text-transform: uppercase;
+      border-bottom: none;
+      padding: 26px;
+    }
+
+    .mat-mdc-row {
+      background-color: v.$backgroundTableTd;
+      border-bottom: 2px solid v.$white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: v.$backgroundHoverTableTd;
+      }
+
+      &.selected {
+        cursor: default;
+        background-color: v.$backgroundHoverTableTd;
+      }
+    }
+
+    .mat-mdc-cell {
+      font-family: v.$helveticaRegular;
+      font-size: 13px;
+      color: v.$text;
+      padding: 22px 26px;
+    }
+  }
+}

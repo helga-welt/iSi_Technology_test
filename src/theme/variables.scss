@@ -1,0 +1,38 @@
+// Colors
+$backgroundBody: #EEF0F8;
+$white: #FFFFFF;
+$backgroundBlocks: #523F690D;
+$lightShadow: #EBEDF3;
+$blueButton: #2E8FF0;
+$blueShadowButton: #2E8FF029;
+$text: #3F4254;
+$backgroundInputs: #F3F6F9;
+$textLabels: #A4A4B5;
+$error: #EF7DA0;
+$errorShadow: #EF7DA05C;
+$deleteButton: #F44682;
+$deleteButtonShadow: #F4468229;
+$success: #66BB6A;
+$successShadow: #4CAF505C;
+$backgroundTableTd: #F4F5F8;
+$backgroundHoverTableTd: #EFF0F4;
+
+// Fonts
+$helveticaRegular: HelveticaRegular, sans-serif;
+$helveticaLight: HelveticaLight, sans-serif;
+$helveticaBold: HelveticaBold, sans-serif;
+
+@font-face {
+  font-family: HelveticaRegular;
+  src: url(../assets/fonts/HelveticaRegular.ttf);
+}
+
+@font-face {
+  font-family: HelveticaLight;
+  src: url(../assets/fonts/HelveticaLight.ttf);
+}
+
+@font-face {
+  font-family: HelveticaBold;
+  src: url(../assets/fonts/HelveticaBold.ttf);
+}

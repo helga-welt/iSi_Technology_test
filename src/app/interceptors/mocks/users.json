@@ -1,0 +1,65 @@
+[
+  {
+    "id": 55,
+    "firstName": "Test",
+    "lastName": "User 1",
+    "username": "test_user_1",
+    "password": "Test1234",
+    "email": "test_user1@test.com",
+    "type": "Admin"
+  },
+  {
+    "id": 56,
+    "firstName": "Test",
+    "lastName": "User 2",
+    "username": "test_user_2",
+    "password": "Test1234",
+    "email": "test_user2@test.com",
+    "type": "Driver"
+  },
+  {
+    "id": 57,
+    "firstName": "Test",
+    "lastName": "User 3",
+    "username": "test_user_3",
+    "password": "Test1234",
+    "email": "test_user3@test.com",
+    "type": "Admin"
+  },
+  {
+    "id": 58,
+    "firstName": "Test",
+    "lastName": "User 4",
+    "username": "test_user_4",
+    "password": "Test1234",
+    "email": "test_user4@test.com",
+    "type": "Admin"
+  },
+  {
+    "id": 59,
+    "firstName": "Test",
+    "lastName": "User 5",
+    "username": "test_user_5",
+    "password": "Test1234",
+    "email": "test_user5@test.com",
+    "type": "Driver"
+  },
+  {
+    "id": 60,
+    "firstName": "Test",
+    "lastName": "User 6",
+    "username": "test_user_6",
+    "password": "Test1234",
+    "email": "test_user6@test.com",
+    "type": "Admin"
+  },
+  {
+    "id": 61,
+    "firstName": "Test",
+    "lastName": "User 7",
+    "username": "test_user_7",
+    "password": "Test1234",
+    "email": "test_user7@test.com",
+    "type": "Driver"
+  }
+]
